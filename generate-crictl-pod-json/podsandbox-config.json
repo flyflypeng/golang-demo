@@ -1,0 +1,111 @@
+{
+    "metadata": {
+        "name": "defaultName",
+        "uid": "defaultUid",
+        "namespace": "defaultNamespace",
+        "attempt": 1
+    },
+    "hostname": "defaultHostname",
+    "log_directory": "/var/log/pods/defaultNamespace_defaultName_defaultUid/",
+    "dns_config": {
+        "servers": [
+            "8.8.8.8"
+        ],
+        "searches": [
+            "example.com"
+        ],
+        "options": [
+            "ndots:5"
+        ]
+    },
+    "port_mappings": [
+        {
+            "container_port": 8080,
+            "host_port": 8080
+        }
+    ],
+    "labels": {
+        "label1": "value1",
+        "label2": "value2"
+    },
+    "annotations": {
+        "annotation1": "value1",
+        "annotation2": "value2"
+    },
+    "linux": {
+        "cgroup_parent": "/docker/defaultCgroup",
+        "security_context": {
+            "namespace_options": {
+                "network": 2
+            },
+            "selinux_options": {
+                "user": "system_u",
+                "role": "system_r",
+                "type": "svirt_lxc_net_t",
+                "level": "s0:c123,c456"
+            },
+            "run_as_user": {
+                "value": 1000
+            },
+            "run_as_group": {
+                "value": 1000
+            },
+            "supplemental_groups": [
+                1001
+            ],
+            "privileged": true
+        },
+        "sysctls": {
+            "net.ipv4.ip_forward": "1"
+        },
+        "overhead": {
+            "cpu_period": 100000,
+            "cpu_quota": 50000,
+            "cpu_shares": 512,
+            "memory_limit_in_bytes": 2147483648,
+            "oom_score_adj": 100,
+            "cpuset_cpus": "0-3",
+            "cpuset_mems": "0-1",
+            "hugepage_limits": [
+                {
+                    "page_size": "2MB",
+                    "limit": 1073741824
+                },
+                {
+                    "page_size": "1GB",
+                    "limit": 2147483648
+                }
+            ],
+            "unified": {
+                "io.weight": "default 100",
+                "memory.max": "6937202688"
+            },
+            "memory_swap_limit_in_bytes": 4294967296
+        },
+        "resources": {
+            "cpu_period": 200000,
+            "cpu_quota": 100000,
+            "cpu_shares": 1024,
+            "memory_limit_in_bytes": 4294967296,
+            "oom_score_adj": 200,
+            "cpuset_cpus": "0-7",
+            "cpuset_mems": "0-3",
+            "hugepage_limits": [
+                {
+                    "page_size": "2MB",
+                    "limit": 2147483648
+                },
+                {
+                    "page_size": "1GB",
+                    "limit": 4294967296
+                }
+            ],
+            "unified": {
+                "io.weight": "default 200",
+                "memory.max": "13874405376"
+            },
+            "memory_swap_limit_in_bytes": 8589934592
+        }
+    },
+    "windows": {}
+}

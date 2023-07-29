@@ -1,0 +1,75 @@
+{
+    "metadata": {
+        "name": "defaultContainerName",
+        "attempt": 1
+    },
+    "image": {
+        "image": "defaultImage"
+    },
+    "command": [
+        "defaultCommand"
+    ],
+    "args": [
+        "defaultArgs"
+    ],
+    "working_dir": "defaultWorkingDir",
+    "envs": [
+        {
+            "key": "defaultEnvKey",
+            "value": "defaultEnvValue"
+        }
+    ],
+    "mounts": [
+        {
+            "container_path": "defaultContainerPath",
+            "host_path": "defaultHostPath"
+        }
+    ],
+    "devices": [
+        {
+            "container_path": "defaultContainerDevicePath",
+            "host_path": "defaultHostDevicePath"
+        }
+    ],
+    "labels": {
+        "defaultLabelKey": "defaultLabelValue"
+    },
+    "annotations": {
+        "defaultAnnotationKey": "defaultAnnotationValue"
+    },
+    "log_path": "defaultLogPath",
+    "stdin": true,
+    "stdin_once": true,
+    "tty": true,
+    "linux": {
+        "resources": {
+            "cpu_period": 100000,
+            "cpu_quota": 50000,
+            "cpu_shares": 512,
+            "memory_limit_in_bytes": 2147483648,
+            "oom_score_adj": 100,
+            "cpuset_cpus": "0-3",
+            "cpuset_mems": "0-1"
+        },
+        "security_context": {
+            "capabilities": {
+                "add_capabilities": [
+                    "defaultCapability"
+                ]
+            },
+            "privileged": true,
+            "namespace_options": {
+                "network": 2
+            },
+            "run_as_user": {
+                "value": 1000
+            },
+            "run_as_group": {
+                "value": 1000
+            },
+            "supplemental_groups": [
+                1001
+            ]
+        }
+    }
+}
